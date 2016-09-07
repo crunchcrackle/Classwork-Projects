@@ -1,0 +1,21 @@
+/* CSS declarations go here */
+#box {
+        background-color: #000;
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+h1{
+	
+}
+body{
+	text-align: center;
+}
+.text-wrap{
+	margin-top: 80px;
+	height:50px;
+}

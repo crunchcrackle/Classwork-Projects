@@ -1,0 +1,20 @@
+<!-- <p>Find me in app/views/countries/index.html.erb</p> -->
+ <table class="table table-bordered" style="width: auto;"  align = center>
+   <h1 align = center >Country List</h1>
+          <tr>
+            <th>Sl.</th>
+            <th>Name</th>
+            <th>Code</th>
+          </tr>
+            <% count = 0 %>
+            <% @countries.each do |country| %>
+          <tr>
+            <% count = count +1 %>
+            <td><%=  count %></td>
+            <td><%= link_to(country.name, country_path(country.code)) %></td>
+            <td><%=  country.code %></td>
+          </tr>
+         <% end %>
+        </table>
+
+

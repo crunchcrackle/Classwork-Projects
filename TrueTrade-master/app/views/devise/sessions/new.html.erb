@@ -1,0 +1,68 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<!-- Added to view admins -->
+<h2 class="new_user-heading" align="center">Please sign in</h2>
+
+
+  <div class="field">
+    <%= f.label :email, class: "sr-only" %><br />
+    <%= f.email_field :email, autofocus: true, class:"form-control", placeholder: "Email address"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, class: "sr-only"%><br />
+    <%= f.password_field :password, autocomplete: "off",class:"form-control", placeholder: "Password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Log in", class: "btn btn-lg btn-primary btn-block" %>
+  </div>
+<% end %>
+
+  
+
+
+
+
+<style type ="text/css">
+  body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.new_user {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.new_user .new_user-heading,
+.new_user .checkbox {
+  margin-bottom: 10px;
+}
+.new_user .checkbox {
+  font-weight: normal;
+}
+.new_user .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.new_user input[id="user_email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.new_user input[id="user_password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style>

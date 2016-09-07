@@ -1,0 +1,17 @@
+Link State
+Trivial Test:
+One of the costs do not match.
+Test Points: 5/25
+Test 1:
+One of the costs do not match.
+Test Points: 5/25
+
+Distance Vector
+Trivial Test:
+One of the costs do not match.
+Test Points: 5/25
+Test 1:
+One of the costs do not match.
+Test Points: 5/25
+
+Total Score: 20

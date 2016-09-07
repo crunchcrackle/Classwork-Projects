@@ -1,0 +1,25 @@
+<!-- <p>Find me in app/views/commodities/index.html.erb</p> -->
+
+<table class="table table-bordered" style="width: 65%;" align = center>
+<h1 align = center >Commodity List</h1>
+  <tr>
+    <th>Sl.</th>
+    <th style = "width:500px">Name</th>
+    <th>Code</th>
+    <th>Actions | <%= link_to 'New', new_commodity_path %>  </th>
+  </tr>
+    <% count = 0 %>
+<% @commodities.each do |commodity| %>
+  <tr>
+    <% count = count +1 %>
+    <td><%=  count %></td>
+    <td><%= commodity.name %></td>
+    <td><%=  commodity.code%></td>
+    <td> <%= link_to "Delete", commodities_delete_path(:id => commodity.code) %> | <%= link_to 'Edit', edit_commodity_path(commodity) %> | <%= link_to 'Show', commodity_path(commodity) %> </td>
+  </tr>
+ <% end %>
+</table>
+
+
+
+

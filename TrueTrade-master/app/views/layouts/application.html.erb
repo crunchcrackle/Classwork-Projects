@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  
+
+<head>
+  <title><%= @page_title or "TrueTrade" %></title>
+<!-- Paragraph below is for devise: http://guides.railsgirls.com/devise/ -->   
+<!--<link rel="stylesheet" href="//railsgirls.com/assets/stylesheets/style.css"> --> 
+<!-- End devise addition --> 
+
+<!-- Strart :Add all sitewide styleshteet/js tags after this --> 
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :highcharts %>
+  <%= javascript_include_tag :highstock %>
+  <%= csrf_meta_tags %>
+  
+  <!--
+  <script src="https://dl.dropboxusercontent.com/u/17718036/plugins/chartjs-chart/Chart.min.js" type="text/javascript"></script>
+  <script src="https://dl.dropboxusercontent.com/u/17718036/plugins/chartjs-chart/chart-chartjs.js" type="text/javascript"></script>
+  -->
+<style type="text/css">
+   body { background: navy; }
+  .boxed { background: #f1f2f7; }
+  html {
+  background-color: rgba(50, 50, 58, 1);
+}
+  
+  /* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+</style>  
+<!-- End :Add all sitewide styleshteet/js tags before this --> 
+</head>
+
+<body class = "boxed">
+  <%= render "shared/topnav" %>
+
+<% if notice %>   
+	<p class="alert alert-success" align = center><%= notice %></p> 
+<% elsif alert %>   
+	<p class="alert alert-danger" align = center><%= alert %></p> 
+<% end %>
+
+<div id="main-container" class="container">
+<%= yield %>
+</div>
+
+  
+<footer>   
+	<div class="text-center footer">     
+	&copy 2015 by Team True Trade. CS 411 Final Project. Data obtained from <a href="url">http://comtrade.un.org/db/</a>. 
+	</div> 
+</footer> 
+<!-- End devise addition (yeld line was not added, but div container and end was) -->  
+</body>
+
+</html>
+
